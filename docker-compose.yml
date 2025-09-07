@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./banking-backend
+      dockerfile: Dockerfile
+    container_name: banking-backend
+    ports:
+      - "5005:5005"
+
+  frontend:
+    build:
+      context: ./banking-frontend
+      dockerfile: docker/Dockerfile
+    container_name: banking-frontend
+    environment:
+      - VARIANT=DEV
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+    # Note: DEV variant serves the dev build that points to http://localhost:5005
+    # via environment.ts, which matches the published backend port above.

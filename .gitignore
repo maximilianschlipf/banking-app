@@ -1,0 +1,28 @@
+# Root runner artifacts
+.runner.log
+.runner.pid
+nohup.out
+
+# Node.js (root runner)
+node_modules/
+/.pnpm-store/
+
+# Env/OS noise
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.swo
+*.tmp
+*.bak
