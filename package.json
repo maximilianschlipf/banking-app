@@ -5,11 +5,11 @@
   "description": "Root runner to start backend (Spring Boot) and frontend (Angular) together",
   "scripts": {
     "setup": "npm run setup:frontend && npm run setup:backend",
-    "setup:frontend": "npm ci --prefix banking-frontend || npm install --prefix banking-frontend",
-    "setup:backend": "mvn -q -DskipTests -f banking-backend/pom.xml -pl BankingAppServer -am package",
-    "start:backend": "mvn -q -DskipTests -f banking-backend/pom.xml -pl BankingAppServer -am package && java -jar banking-backend/BankingAppServer/target/SimplyTest-BankingServer.jar",
-    "start:frontend": "npm run --prefix banking-frontend start",
-    "start:frontend:en": "npm run --prefix banking-frontend start -- -c en",
+    "setup:frontend": "npm ci --prefix frontend || npm install --prefix frontend",
+    "setup:backend": "mvn -q -DskipTests -f backend/pom.xml -pl BankingAppServer -am package",
+    "start:backend": "mvn -q -DskipTests -f backend/pom.xml -pl BankingAppServer -am package && java -jar backend/BankingAppServer/target/SimplyTest-BankingServer.jar",
+    "start:frontend": "npm run --prefix frontend start",
+    "start:frontend:en": "npm run --prefix frontend start -- -c en",
     "start": "concurrently -k -n backend,frontend -c blue,green \"npm run start:backend\" \"npm run start:frontend\"",
     "start:en": "concurrently -k -n backend,frontend -c blue,green \"npm run start:backend\" \"npm run start:frontend:en\""
   },

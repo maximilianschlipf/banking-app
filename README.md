@@ -4,10 +4,15 @@ This root adds simple, one-place commands to run and prepare the demo app for yo
 
 ## Setup Both Projects
 
+- Clone with submodules:
+  - `git clone --recurse-submodules https://github.com/maximilianschlipf/banking-app.git`
+  - `cd banking-app`
+  - `git submodule update --init --recursive`
+  - To pull latest commits from tracked submodule branches: `git submodule update --remote --recursive`
 - One-time (or after dependency changes):
   - `npm run setup`
-    - Installs frontend dependencies in `banking-frontend/`
-    - Builds backend modules and packages the server JAR in `banking-backend/`
+    - Installs frontend dependencies in `frontend/`
+    - Builds backend modules and packages the server JAR in `backend/`
 
 ## Quick Start (Local Dev)
 
@@ -42,8 +47,8 @@ This starts:
 
 ## Repo Structure
 
-- `banking-backend/` – Spring Boot server (port 5005)
-- `banking-frontend/` – Angular app (dev server 4200; prod build via nginx)
+- `backend/` – Spring Boot server (port 5005) [git submodule]
+- `frontend/` – Angular app (dev server 4200; prod build via nginx) [git submodule]
 - `docker-compose.yml` – Containerized runner for both services
 - `package.json` – Root runner scripts for local dev
 
