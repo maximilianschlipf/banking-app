@@ -1,0 +1,8 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/maximilianschlipf/banking-frontend.git
+	branch = chore/remove-cypress-cucumber
+[submodule "backend"]
+	path = backend
+	url = https://github.com/maximilianschlipf/banking-backend.git
+	branch = feature/jdk21-docker-boot
