@@ -1,7 +1,7 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/maximilianschlipf/banking-frontend.git
-	branch = chore/remove-cypress-cucumber
+	branch = feat/build-dev-script
 [submodule "backend"]
 	path = backend
 	url = https://github.com/maximilianschlipf/banking-backend.git
