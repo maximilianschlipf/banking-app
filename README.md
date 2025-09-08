@@ -16,7 +16,7 @@ This root adds simple, one-place commands to run and prepare the demo app for yo
 
 ## Quick Start (Local Dev)
 
-- Prereqs: Node 18+ (or 20+), npm, Java 21+, Maven.
+- Prereqs: [Node.js 18+](https://nodejs.org/) (or 20+), [npm](https://www.npmjs.com/), [Java 21+ JDK](https://adoptium.net/temurin/releases/?version=21), [Maven](https://maven.apache.org/).
 - Backend runs on `http://localhost:5005`, Frontend on `http://localhost:4200`.
 
 Steps:
@@ -54,4 +54,4 @@ This starts:
 
 ## Workshop Tests
 
-Intentionally omitted here so attendees can scaffold their own Playwright setup in a new `tests/` folder at the repo root.
+Intentionally omitted here so you can scaffold your own Playwright setup in a new `tests/` folder at the repo root.
